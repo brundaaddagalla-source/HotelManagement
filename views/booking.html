@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Room</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/booking.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Book Your Room</h1>
+    </header>
+
+    <main class="container">
+
+        <section
+            id="roomDetails"
+            class="room-details-card"
+        >
+
+            <h2>Room Details</h2>
+
+            <p id="roomType"></p>
+            <p id="roomNumber"></p>
+            <p id="roomPrice"></p>
+            <p id="roomCapacity"></p>
+
+        </section>
+
+        <section class="booking-form">
+
+            <h2>Booking Details</h2>
+
+            <form id="bookingForm">
+
+                <label for="userId">
+                    User ID
+                </label>
+
+                <input
+                    type="number"
+                    id="userId"
+                    required
+                >
+
+
+                <label for="checkIn">
+                    Check-in Date
+                </label>
+
+                <input
+                    type="date"
+                    id="checkIn"
+                    required
+                >
+
+
+                <label for="checkOut">
+                    Check-out Date
+                </label>
+
+                <input
+                    type="date"
+                    id="checkOut"
+                    required
+                >
+
+
+                <label for="guests">
+                    Number of Guests
+                </label>
+
+                <input
+                    type="number"
+                    id="guests"
+                    min="1"
+                    required
+                >
+
+                <p>
+                    <strong>Total Amount:</strong>
+                    ₹<span id="totalAmount">0</span>
+                </p>
+
+                <button type="submit">
+                    Confirm Booking
+                </button>
+
+            </form>
+
+            <p id="bookingMessage"></p>
+
+        </section>
+
+    </main>
+
+    <script type="module" src="../js/booking.js"></script>
+
+</body>
+</html>
