@@ -1,4 +1,4 @@
-import {getHotels} from "./services/hotelService.js";
+import { getHotels } from "./services/hotelService.js";
 
 let hotels = [];
 
@@ -39,6 +39,13 @@ function displayHotels(hotels) {
 
                 <p>₹${hotel.price} per night</p>
 
+                <button
+                    class="view-hotel-btn"
+                    onclick="window.location.href='hotel-details.html?id=${hotel.id}'"
+                >
+                    View Hotel
+                </button>
+
             </div>
         `;
     });
@@ -61,30 +68,47 @@ function loadLocations() {
 }
 
 function filterHotels() {
-    const searchText =
-        document.getElementById("searchInput").value.toLowerCase();
 
-    const location =
-        document.getElementById("locationFilter").value;
+    const searchText = document.getElementById("searchInput").value.toLowerCase();
+    const location = document.getElementById("locationFilter").value;
+    const price = document.getElementById("priceFilter").value;
 
     const filteredHotels = hotels.filter(hotel => {
 
-        const matchesSearch =
-            hotel.name.toLowerCase().includes(searchText);
+        const matchesSearch = hotel.name.toLowerCase().includes(searchText);
+        const matchesLocation =location === "" || hotel.location === location;
 
-        const matchesLocation =
-            location === "" || hotel.location === location;
-
-        return matchesSearch && matchesLocation;
+        let matchesPrice = true;
+        if (price !== "" && price !== "custom") {
+            matchesPrice = hotel.price <= Number(price);
+        }
+        return ( matchesSearch && matchesLocation && matchesPrice);
     });
-
     displayHotels(filteredHotels);
 }
+
 
 document.getElementById("searchInput")
     .addEventListener("input", filterHotels);
 
 document.getElementById("locationFilter")
     .addEventListener("change", filterHotels);
+
+document.getElementById("priceFilter")
+    .addEventListener("change", function () {
+        if (this.value === "custom") {
+            const min = Number(prompt("Enter minimum price:"));
+            const max = Number(prompt("Enter maximum price:"));
+            if (!isNaN(min) && !isNaN(max)) {
+                const filteredHotels = hotels.filter(hotel => {
+                    return hotel.price >= min && hotel.price <= max;
+                });
+                displayHotels(filteredHotels);
+            }
+            this.value = "";
+        } else {
+            filterHotels();
+        }
+    });
 
 loadHotels();

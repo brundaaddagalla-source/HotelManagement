@@ -361,6 +361,14 @@ applyFilterBtn.addEventListener(
     }
 );
 
+
+statusFilter.addEventListener(
+    "change",
+    function () {
+        applyFilterBtn.click();
+    }
+);
+
 // CLEAR FILTER
 
 clearFilterBtn.addEventListener(

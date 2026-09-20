@@ -233,25 +233,33 @@ function calculateNights() {
 
 function calculateTotal() {
 
-    if (!selectedRoom) {
+    if (
+        !selectedRoom ||
+        !checkInInput.value ||
+        !checkOutInput.value
+    ) {
         return;
     }
 
-    const nights =
-        calculateNights();
+    const nights = calculateNights();
+
+    console.log("Room price:", selectedRoom.price);
+    console.log("Check-in:", checkInInput.value);
+    console.log("Check-out:", checkOutInput.value);
+    console.log("Nights:", nights);
 
     if (nights <= 0) {
-
         totalAmount.textContent = "0";
         return;
     }
 
-    const total =
-        Number(selectedRoom.price) *
-        nights;
+    const price = Number(selectedRoom.price);
 
-    totalAmount.textContent =
-        total;
+    const total = price * nights;
+
+    console.log("Total:", total);
+
+    totalAmount.textContent = total;
 }
 
 // DATE EVENTS
@@ -519,7 +527,9 @@ bookingForm.addEventListener(
             bookingMessage.textContent =
                 `Booking successful! Booking ID: ${booking.id}`;
 
-            bookingForm.reset();
+            alert(
+                `Booking successful!`
+            );
 
             totalAmount.textContent = "0";
 
@@ -533,5 +543,12 @@ bookingForm.addEventListener(
     }
 );
 
-setDateLimits();
-loadRoom();
+// ==================== PAGE INITIALIZATION ====================
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    setDateLimits();
+
+    loadRoom();
+
+});

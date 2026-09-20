@@ -1071,9 +1071,81 @@
       "checkOut": "2026-09-24",
       "guests": 2,
       "totalAmount": 5000,
-      "status": "Confirmed",
+      "status": "Cancelled",
       "bookingDate": "2026-09-20",
       "id": "IgCbuZVMirY"
+    },
+    {
+      "userId": 1,
+      "hotelId": 1,
+      "roomId": 2,
+      "checkIn": "2026-09-20",
+      "checkOut": "2026-09-22",
+      "guests": 2,
+      "totalAmount": 7000,
+      "status": "Cancelled",
+      "bookingDate": "2026-09-20",
+      "id": "pP6CqFwHxfw"
+    },
+    {
+      "userId": 4,
+      "hotelId": 1,
+      "roomId": 2,
+      "checkIn": "2026-09-23",
+      "checkOut": "2026-09-30",
+      "guests": 2,
+      "totalAmount": 24500,
+      "status": "Confirmed",
+      "bookingDate": "2026-09-20",
+      "id": "fV4VRQ_T4ZY"
+    },
+    {
+      "userId": 3,
+      "hotelId": 1,
+      "roomId": 1,
+      "checkIn": "2026-09-25",
+      "checkOut": "2026-09-26",
+      "guests": 2,
+      "totalAmount": 2500,
+      "status": "Confirmed",
+      "bookingDate": "2026-09-20",
+      "id": "fK1mapB6SdU"
+    },
+    {
+      "userId": 10,
+      "hotelId": 3,
+      "roomId": 8,
+      "checkIn": "2026-09-20",
+      "checkOut": "2026-09-22",
+      "guests": 2,
+      "totalAmount": 8400,
+      "status": "Confirmed",
+      "bookingDate": "2026-09-20",
+      "id": "-PAHH_eUASY"
+    },
+    {
+      "userId": 5,
+      "hotelId": 4,
+      "roomId": 9,
+      "checkIn": "2026-09-20",
+      "checkOut": "2026-09-22",
+      "guests": 2,
+      "totalAmount": 3600,
+      "status": "Cancelled",
+      "bookingDate": "2026-09-20",
+      "id": "MPhjTsMvT1M"
+    },
+    {
+      "userId": 12,
+      "hotelId": 4,
+      "roomId": 9,
+      "checkIn": "2026-09-20",
+      "checkOut": "2026-09-22",
+      "guests": 2,
+      "totalAmount": 3600,
+      "status": "Cancelled",
+      "bookingDate": "2026-09-20",
+      "id": "4Wju-848iCU"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Booking History</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/booking.css">
+</head>
+
+<body>
+
+    <button class="back-btn" onclick="window.location.href='hotel-details.html?id=' + new URLSearchParams(window.location.search).get('hotelId')">
+        ← Back to Hotel
+    </button>
+    
+    <main class="booking-history-container">
+
+        <h1>My Booking History</h1>
+
+        <div id="bookingList">
+            <!-- Bookings will be displayed here -->
+        </div>
+
+    </main>
+
+    <script type="module" src="../js/booking-history.js"></script>
+
+</body>
+</html>
