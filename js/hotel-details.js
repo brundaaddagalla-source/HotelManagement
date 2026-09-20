@@ -98,14 +98,40 @@ function displayHotel(hotel, rooms) {
             </div>
 
             <div class="amenities">
-                <h3>Amenities </h3>
+                <h3>Amenities</h3>
+
                 <div class="amenities-list">
-                    <span class="amenity">📶 Free WiFi </span>
-                    <span class="amenity">🚗 Parking </span>
-                    <span class="amenity">🍽 Restaurant </span>
-                    <span class="amenity">🏊 Swimming Pool </span>
-                    <span class="amenity">❄️ Air Conditioning</span>
-                    <span class="amenity">🛎 Room Service</span>
+                ${
+                hotel.amenities.map(amenity => {
+                const icons = {
+                    "Free Wi-Fi": "📶",
+                    "Swimming Pool": "🏊",
+                    "Restaurant": "🍽️",
+                    "Parking": "🚗",
+                    "Room Service": "🛎️",
+                    "Gym": "🏋️",
+                    "Spa": "💆",
+                    "Airport Shuttle": "🚐",
+                    "Garden": "🌳",
+                    "Beach Access": "🏖️",
+                    "Mountain View": "🏔️",
+                    "Lake View": "🌊",
+                    "River View": "🌊",
+                    "Conference Hall": "🏢",
+                    "Business Center": "💼",
+                    "Fireplace": "🔥",
+                    "Water Sports": "🏄",
+                    "Campfire": "🔥",
+                    "Bar": "🍹",
+                    "Room Service": "🛎️"
+                };
+                return `
+                    <span class="amenity">
+                        ${icons[amenity] || "✓"} ${amenity}
+                    </span>
+                `;
+                }).join("")
+                }
                 </div>
             </div>
 
@@ -148,11 +174,11 @@ function displayHotel(hotel, rooms) {
         }
         );
     document
-    .getElementById("viewHistoryBtn")
-    .addEventListener("click", function () {
-        window.location.href =
-            `booking-history.html?hotelId=${hotelId}`;
-    });
+        .getElementById("viewHistoryBtn")
+        .addEventListener("click", function () {
+            window.location.href =
+                `booking-history.html?hotelId=${hotelId}`;
+        });
 
 }
 
