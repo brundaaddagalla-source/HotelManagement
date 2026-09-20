@@ -1146,6 +1146,18 @@
       "status": "Cancelled",
       "bookingDate": "2026-09-20",
       "id": "4Wju-848iCU"
+    },
+    {
+      "userId": 10,
+      "hotelId": 1,
+      "roomId": 1,
+      "checkIn": "2026-09-29",
+      "checkOut": "2026-09-30",
+      "guests": 2,
+      "totalAmount": 2500,
+      "status": "Confirmed",
+      "bookingDate": "2026-09-20",
+      "id": "g4g2J_I5xro"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
