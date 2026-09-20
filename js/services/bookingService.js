@@ -1,4 +1,8 @@
+import axios from "https://cdn.jsdelivr.net/npm/axios@1.6.7/+esm";
 import API_URL from "./apiConfig.js";
+
+import { ApiException } from "../../exception/apiException.js";
+
 
 // Get all bookings
 export async function getBookings() {
@@ -11,6 +15,7 @@ export async function getBookings() {
     return await response.json();
 }
 
+
 // Get bookings for a specific user
 export async function getBookingsByUser(userId) {
     const response = await fetch(`${API_URL}/bookings?userId=${userId}`);
@@ -21,6 +26,7 @@ export async function getBookingsByUser(userId) {
 
     return await response.json();
 }
+
 
 // Cancel a booking
 export async function cancelBooking(bookingId) {
@@ -40,6 +46,8 @@ export async function cancelBooking(bookingId) {
 
     return await response.json();
 }
+
+
 // Get hotel details
 export async function getHotelById(hotelId) {
     const response = await fetch(`${API_URL}/hotels/${hotelId}`);
@@ -51,6 +59,7 @@ export async function getHotelById(hotelId) {
     return await response.json();
 }
 
+
 // Get room details
 export async function getRoomById(roomId) {
     const response = await fetch(`${API_URL}/rooms/${roomId}`);
@@ -60,35 +69,12 @@ export async function getRoomById(roomId) {
     }
 
     return await response.json();
-import axios from "https://cdn.jsdelivr.net/npm/axios@1.6.7/+esm";
-import API_URL from "./apiConfig.js";
-
-import { ApiException } from "../../exception/apiException.js";
-
-
-export async function getRoomById(roomId) {
-
-    try {
-
-        const response = await axios.get(
-            `${API_URL}/rooms/${roomId}`
-        );
-
-        return response.data;
-
-    } catch (error) {
-
-        throw new ApiException(
-            "Unable to load room details"
-        );
-    }
 }
 
 
+// Get bookings for a specific room
 export async function getBookingsByRoom(roomId) {
-
     try {
-
         const response = await axios.get(
             `${API_URL}/bookings?roomId=${roomId}`
         );
@@ -96,7 +82,6 @@ export async function getBookingsByRoom(roomId) {
         return response.data;
 
     } catch (error) {
-
         throw new ApiException(
             "Unable to check room availability"
         );
@@ -104,10 +89,9 @@ export async function getBookingsByRoom(roomId) {
 }
 
 
+// Get user details
 export async function getUserById(userId) {
-
     try {
-
         const response = await axios.get(
             `${API_URL}/users/${userId}`
         );
@@ -115,7 +99,6 @@ export async function getUserById(userId) {
         return response.data;
 
     } catch (error) {
-
         throw new ApiException(
             "User not found"
         );
@@ -123,10 +106,9 @@ export async function getUserById(userId) {
 }
 
 
+// Create a booking
 export async function createBooking(bookingData) {
-
     try {
-
         const response = await axios.post(
             `${API_URL}/bookings`,
             bookingData
@@ -135,7 +117,6 @@ export async function createBooking(bookingData) {
         return response.data;
 
     } catch (error) {
-
         throw new ApiException(
             "Unable to create booking"
         );
