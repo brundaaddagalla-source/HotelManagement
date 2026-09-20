@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,11 @@
 </head>
 
 <body>
+
+    <button class="back-btn"
+        onclick="window.location.href='hotel-details.html?id=' + new URLSearchParams(window.location.search).get('hotelId')">
+        ← Back to Hotel
+    </button>
 
     <header>
         <h1>Select Your Room</h1>
@@ -44,46 +50,29 @@
                 Check-in:
             </label>
 
-            <input
-                type="date"
-                id="checkIn"
-            >
+            <input type="date" id="checkIn">
 
             <!-- Check-out -->
             <label for="checkOut">
                 Check-out:
             </label>
 
-            <input
-                type="date"
-                id="checkOut"
-            >
+            <input type="date" id="checkOut">
 
             <!-- Guests -->
             <label for="guests">
                 Guests:
             </label>
 
-            <input
-                type="number"
-                id="guests"
-                min="1"
-                placeholder="Number of guests"
-            >
+            <input type="number" id="guests" min="1" placeholder="Number of guests">
 
             <div class="filter-buttons">
 
-                <button
-                    type="button"
-                    id="applyFilterBtn"
-                >
+                <button type="button" id="applyFilterBtn">
                     Apply Filter
                 </button>
 
-                <button
-                    type="button"
-                    id="clearFilterBtn"
-                >
+                <button type="button" id="clearFilterBtn">
                     Clear Filter
                 </button>
 
@@ -92,10 +81,7 @@
         </div>
 
         <!-- Rooms -->
-        <div
-            id="roomContainer"
-            class="room-container"
-        >
+        <div id="roomContainer" class="room-container">
             <!-- Rooms will appear here -->
         </div>
 
@@ -103,10 +89,8 @@
 
     </main>
 
-    <script
-        type="module"
-        src="../js/room.js"
-    ></script>
+    <script type="module" src="../js/room.js"></script>
 
 </body>
+
 </html>
