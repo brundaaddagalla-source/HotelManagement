@@ -5,8 +5,6 @@ import API_URL from "./apiConfig.js";
 import { ApiException } from "../../exception/apiException.js";
 
 
-// ==================== GET ALL BOOKINGS ====================
-
 export async function getBookings() {
 
     try {
@@ -27,7 +25,6 @@ export async function getBookings() {
 }
 
 
-// ==================== GET BOOKINGS BY USER ====================
 
 export async function getBookingsByUser(userId) {
 
@@ -48,6 +45,7 @@ export async function getBookingsByUser(userId) {
     }
 }
 
+
 export async function getBookingsByHotel(hotelId) {
 
     try {
@@ -61,13 +59,31 @@ export async function getBookingsByHotel(hotelId) {
     } catch (error) {
 
         throw new ApiException(
-            "Failed to fetch hotel bookings."
+            "Failed to fetch hotel bookings"
         );
+
     }
 }
 
 
-// ==================== CANCEL BOOKING ====================
+export async function getBookingsByRoom(roomId) {
+
+    try {
+
+        const response = await axios.get(
+            `${API_URL}/bookings?roomId=${roomId}`
+        );
+
+        return response.data;
+
+    } catch (error) {
+
+        throw new ApiException(
+            "Unable to check room availability"
+        );
+
+    }
+}
 
 export async function cancelBooking(bookingId) {
 
@@ -92,8 +108,6 @@ export async function cancelBooking(bookingId) {
 }
 
 
-// ==================== GET HOTEL BY ID ====================
-
 export async function getHotelById(hotelId) {
 
     try {
@@ -113,8 +127,6 @@ export async function getHotelById(hotelId) {
     }
 }
 
-
-// ==================== GET ROOM BY ID ====================
 
 export async function getRoomById(roomId) {
 
@@ -136,30 +148,6 @@ export async function getRoomById(roomId) {
 }
 
 
-// ==================== GET BOOKINGS BY ROOM ====================
-
-export async function getBookingsByRoom(roomId) {
-
-    try {
-
-        const response = await axios.get(
-            `${API_URL}/bookings?roomId=${roomId}`
-        );
-
-        return response.data;
-
-    } catch (error) {
-
-        throw new ApiException(
-            "Unable to check room availability"
-        );
-
-    }
-}
-
-
-// ==================== GET USER BY ID ====================
-
 export async function getUserById(userId) {
 
     try {
@@ -179,8 +167,6 @@ export async function getUserById(userId) {
     }
 }
 
-
-// ==================== CREATE BOOKING ====================
 
 export async function createBooking(bookingData) {
 
