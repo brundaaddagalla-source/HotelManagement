@@ -1,0 +1,940 @@
+{
+  "hotels": [
+    {
+      "id": 1,
+      "name": "Grand Palace Hotel",
+      "location": "Vijayawada",
+      "rating": 4.5,
+      "price": 3500,
+      "image": "assets/images/grand-palace.jpg",
+      "amenities": ["Free Wi-Fi", "Swimming Pool", "Restaurant", "Parking", "Room Service"],
+      "description": "A luxurious hotel offering comfortable rooms and excellent hospitality in the heart of Vijayawada."
+    },
+    {
+      "id": 2,
+      "name": "Taj Residency",
+      "location": "Hyderabad",
+      "rating": 4.7,
+      "price": 5500,
+      "image": "assets/images/taj-residency.jpg",
+      "amenities": ["Free Wi-Fi", "Gym", "Restaurant", "Spa", "Airport Shuttle"],
+      "description": "A premium hotel with modern facilities and elegant rooms for business and leisure travelers."
+    },
+    {
+      "id": 3,
+      "name": "Lake View Resort",
+      "location": "Bengaluru",
+      "rating": 4.2,
+      "price": 4200,
+      "image": "assets/images/lake-view.jpg",
+      "amenities": ["Free Wi-Fi", "Lake View", "Restaurant", "Garden", "Parking"],
+      "description": "A peaceful resort surrounded by beautiful scenery, ideal for a relaxing vacation."
+    },
+    {
+      "id": 4,
+      "name": "Royal Comfort Inn",
+      "location": "Chennai",
+      "rating": 4.0,
+      "price": 2200,
+      "image": "assets/images/royal-comfort.jpg",
+      "amenities": ["Free Wi-Fi", "Parking", "Restaurant", "Room Service"],
+      "description": "An affordable hotel offering comfortable accommodation and essential facilities."
+    },
+    {
+      "id": 5,
+      "name": "Mountain Breeze Resort",
+      "location": "Ooty",
+      "rating": 4.6,
+      "price": 4800,
+      "image": "assets/images/mountain-breeze.jpg",
+      "amenities": ["Free Wi-Fi", "Mountain View", "Restaurant", "Campfire", "Garden"],
+      "description": "A scenic mountain resort perfect for families, couples, and nature lovers."
+    },
+    {
+      "id": 6,
+      "name": "Sunrise Beach Hotel",
+      "location": "Goa",
+      "rating": 4.4,
+      "price": 6000,
+      "image": "assets/images/sunrise-beach.jpg",
+      "amenities": ["Free Wi-Fi", "Swimming Pool", "Beach Access", "Restaurant", "Bar", "Parking"],
+      "description": "A beachfront hotel with beautiful views and premium holiday amenities."
+    },
+    {
+      "id": 7,
+      "name": "Green Valley Hotel",
+      "location": "Visakhapatnam",
+      "rating": 4.3,
+      "price": 3200,
+      "image": "assets/images/green-valley.jpg",
+      "amenities": ["Free Wi-Fi", "Restaurant", "Parking", "Garden", "Room Service"],
+      "description": "A comfortable hotel located close to major attractions and beaches."
+    },
+    {
+      "id": 8,
+      "name": "City Central Hotel",
+      "location": "Mumbai",
+      "rating": 4.1,
+      "price": 4500,
+      "image": "assets/images/city-central.jpg",
+      "amenities": ["Free Wi-Fi", "Gym", "Restaurant", "Business Center", "Parking"],
+      "description": "A modern city hotel designed for business and leisure travelers."
+    },
+    {
+      "id": 9,
+      "name": "Heritage Palace",
+      "location": "Jaipur",
+      "rating": 4.8,
+      "price": 5200,
+      "image": "assets/images/heritage-palace.jpg",
+      "amenities": ["Free Wi-Fi", "Swimming Pool", "Restaurant", "Garden", "Spa"],
+      "description": "A traditional heritage property offering a royal stay in Jaipur."
+    },
+    {
+      "id": 10,
+      "name": "Riverfront Residency",
+      "location": "Kolkata",
+      "rating": 4.2,
+      "price": 3800,
+      "image": "assets/images/riverfront.jpg",
+      "amenities": ["Free Wi-Fi", "River View", "Restaurant", "Parking", "Room Service"],
+      "description": "A modern hotel with beautiful river views and convenient city access."
+    },
+    {
+      "id": 11,
+      "name": "Coastal Breeze Resort",
+      "location": "Pondicherry",
+      "rating": 4.5,
+      "price": 4600,
+      "image": "assets/images/coastal-breeze.jpg",
+      "amenities": ["Free Wi-Fi", "Beach Access", "Swimming Pool", "Restaurant", "Garden"],
+      "description": "A relaxing coastal resort ideal for weekend getaways and family vacations."
+    },
+    {
+      "id": 12,
+      "name": "Snow Peak Resort",
+      "location": "Manali",
+      "rating": 4.7,
+      "price": 5800,
+      "image": "assets/images/snow-peak.jpg",
+      "amenities": ["Free Wi-Fi", "Mountain View", "Restaurant", "Fireplace", "Parking"],
+      "description": "A mountain resort offering scenic views and a peaceful stay."
+    },
+    {
+      "id": 13,
+      "name": "Garden Grand Hotel",
+      "location": "Delhi",
+      "rating": 4.3,
+      "price": 5000,
+      "image": "assets/images/garden-grand.jpg",
+      "amenities": ["Free Wi-Fi", "Gym", "Restaurant", "Conference Hall", "Parking"],
+      "description": "A premium business hotel located near major commercial areas."
+    },
+    {
+      "id": 14,
+      "name": "Palm Grove Resort",
+      "location": "Kochi",
+      "rating": 4.4,
+      "price": 4100,
+      "image": "assets/images/palm-grove.jpg",
+      "amenities": ["Free Wi-Fi", "Pool", "Restaurant", "Garden", "Spa"],
+      "description": "A tropical resort surrounded by greenery and peaceful surroundings."
+    },
+    {
+      "id": 15,
+      "name": "Silver Oak Inn",
+      "location": "Mysore",
+      "rating": 4.0,
+      "price": 2800,
+      "image": "assets/images/silver-oak.jpg",
+      "amenities": ["Free Wi-Fi", "Parking", "Restaurant", "Room Service"],
+      "description": "A budget-friendly hotel offering comfortable rooms and convenient services."
+    },
+    {
+      "id": 16,
+      "name": "Royal Orchid Suites",
+      "location": "Pune",
+      "rating": 4.6,
+      "price": 4900,
+      "image": "assets/images/royal-orchid.jpg",
+      "amenities": ["Free Wi-Fi", "Gym", "Swimming Pool", "Restaurant", "Spa"],
+      "description": "A stylish hotel with modern rooms and premium facilities."
+    },
+    {
+      "id": 17,
+      "name": "Desert Rose Hotel",
+      "location": "Jaisalmer",
+      "rating": 4.5,
+      "price": 3900,
+      "image": "assets/images/desert-rose.jpg",
+      "amenities": ["Free Wi-Fi", "Restaurant", "Garden", "Parking", "Cultural Shows"],
+      "description": "A traditional hotel offering an authentic desert city experience."
+    },
+    {
+      "id": 18,
+      "name": "Hilltop Residency",
+      "location": "Shimla",
+      "rating": 4.3,
+      "price": 4300,
+      "image": "assets/images/hilltop.jpg",
+      "amenities": ["Free Wi-Fi", "Mountain View", "Restaurant", "Fireplace", "Parking"],
+      "description": "A cozy hilltop property with scenic views of the surrounding mountains."
+    },
+    {
+      "id": 19,
+      "name": "Lotus Grand Hotel",
+      "location": "Ahmedabad",
+      "rating": 4.1,
+      "price": 3100,
+      "image": "assets/images/lotus-grand.jpg",
+      "amenities": ["Free Wi-Fi", "Restaurant", "Gym", "Parking", "Room Service"],
+      "description": "A modern hotel offering affordable accommodation for business travelers."
+    },
+    {
+      "id": 20,
+      "name": "Blue Lagoon Resort",
+      "location": "Andaman",
+      "rating": 4.8,
+      "price": 7200,
+      "image": "assets/images/blue-lagoon.jpg",
+      "amenities": ["Free Wi-Fi", "Beach Access", "Swimming Pool", "Restaurant", "Water Sports"],
+      "description": "A premium island resort offering a relaxing tropical vacation experience."
+    }
+  ],
+
+  "rooms": [
+    {
+      "id": 1,
+      "hotelId": 1,
+      "roomNumber": "101",
+      "roomType": "Standard",
+      "price": 2500,
+      "capacity": 2,
+      "status": "Available"
+    },
+    {
+      "id": 2,
+      "hotelId": 1,
+      "roomNumber": "102",
+      "roomType": "Deluxe",
+      "price": 3500,
+      "capacity": 3,
+      "status": "Available"
+    },
+    {
+      "id": 3,
+      "hotelId": 1,
+      "roomNumber": "103",
+      "roomType": "Suite",
+      "price": 5000,
+      "capacity": 4,
+      "status": "Occupied"
+    },
+    {
+      "id": 4,
+      "hotelId": 2,
+      "roomNumber": "201",
+      "roomType": "Standard",
+      "price": 4000,
+      "capacity": 2,
+      "status": "Available"
+    },
+    {
+      "id": 5,
+      "hotelId": 2,
+      "roomNumber": "202",
+      "roomType": "Deluxe",
+      "price": 5500,
+      "capacity": 3,
+      "status": "Available"
+    },
+    {
+      "id": 6,
+      "hotelId": 2,
+      "roomNumber": "203",
+      "roomType": "Suite",
+      "price": 7500,
+      "capacity": 4,
+      "status": "Available"
+    },
+    {
+      "id": 7,
+      "hotelId": 3,
+      "roomNumber": "301",
+      "roomType": "Standard",
+      "price": 3000,
+      "capacity": 2,
+      "status": "Available"
+    },
+    {
+      "id": 8,
+      "hotelId": 3,
+      "roomNumber": "302",
+      "roomType": "Deluxe",
+      "price": 4200,
+      "capacity": 3,
+      "status": "Available"
+    },
+    {
+      "id": 9,
+      "hotelId": 4,
+      "roomNumber": "401",
+      "roomType": "Standard",
+      "price": 1800,
+      "capacity": 2,
+      "status": "Available"
+    },
+    {
+      "id": 10,
+      "hotelId": 4,
+      "roomNumber": "402",
+      "roomType": "Deluxe",
+      "price": 2200,
+      "capacity": 3,
+      "status": "Available"
+    },
+    {
+      "id": 11,
+      "hotelId": 5,
+      "roomNumber": "501",
+      "roomType": "Deluxe",
+      "price": 4800,
+      "capacity": 3,
+      "status": "Available"
+    },
+    {
+      "id": 12,
+      "hotelId": 5,
+      "roomNumber": "502",
+      "roomType": "Suite",
+      "price": 6500,
+      "capacity": 4,
+      "status": "Available"
+    },
+    {
+      "id": 13,
+      "hotelId": 6,
+      "roomNumber": "601",
+      "roomType": "Deluxe",
+      "price": 6000,
+      "capacity": 3,
+      "status": "Available"
+    },
+    {
+      "id": 14,
+      "hotelId": 6,
+      "roomNumber": "602",
+      "roomType": "Suite",
+      "price": 8500,
+      "capacity": 4,
+      "status": "Available"
+    },
+
+    {
+      "id": 15,
+      "hotelId": 7,
+      "roomNumber": "701",
+      "roomType": "Standard",
+      "price": 2200,
+      "capacity": 2,
+      "status": "Available"
+    },
+    {
+      "id": 16,
+      "hotelId": 7,
+      "roomNumber": "702",
+      "roomType": "Deluxe",
+      "price": 3200,
+      "capacity": 3,
+      "status": "Available"
+    },
+    {
+      "id": 17,
+      "hotelId": 7,
+      "roomNumber": "703",
+      "roomType": "Suite",
+      "price": 4800,
+      "capacity": 4,
+      "status": "Occupied"
+    },
+    {
+      "id": 18,
+      "hotelId": 8,
+      "roomNumber": "801",
+      "roomType": "Standard",
+      "price": 3500,
+      "capacity": 2,
+      "status": "Available"
+    },
+    {
+      "id": 19,
+      "hotelId": 8,
+      "roomNumber": "802",
+      "roomType": "Deluxe",
+      "price": 4500,
+      "capacity": 3,
+      "status": "Available"
+    },
+    {
+      "id": 20,
+      "hotelId": 8,
+      "roomNumber": "803",
+      "roomType": "Suite",
+      "price": 6500,
+      "capacity": 4,
+      "status": "Available"
+    },
+    {
+      "id": 21,
+      "hotelId": 9,
+      "roomNumber": "901",
+      "roomType": "Standard",
+      "price": 4000,
+      "capacity": 2,
+      "status": "Available"
+    },
+    {
+      "id": 22,
+      "hotelId": 9,
+      "roomNumber": "902",
+      "roomType": "Deluxe",
+      "price": 5200,
+      "capacity": 3,
+      "status": "Available"
+    },
+    {
+      "id": 23,
+      "hotelId": 9,
+      "roomNumber": "903",
+      "roomType": "Suite",
+      "price": 7500,
+      "capacity": 4,
+      "status": "Available"
+    },
+    {
+      "id": 24,
+      "hotelId": 10,
+      "roomNumber": "1001",
+      "roomType": "Standard",
+      "price": 2800,
+      "capacity": 2,
+      "status": "Available"
+    },
+    {
+      "id": 25,
+      "hotelId": 10,
+      "roomNumber": "1002",
+      "roomType": "Deluxe",
+      "price": 3800,
+      "capacity": 3,
+      "status": "Occupied"
+    },
+    {
+      "id": 26,
+      "hotelId": 10,
+      "roomNumber": "1003",
+      "roomType": "Suite",
+      "price": 5500,
+      "capacity": 4,
+      "status": "Available"
+    },
+    {
+      "id": 27,
+      "hotelId": 11,
+      "roomNumber": "1101",
+      "roomType": "Standard",
+      "price": 3200,
+      "capacity": 2,
+      "status": "Available"
+    },
+    {
+      "id": 28,
+      "hotelId": 11,
+      "roomNumber": "1102",
+      "roomType": "Deluxe",
+      "price": 4600,
+      "capacity": 3,
+      "status": "Available"
+    },
+    {
+      "id": 29,
+      "hotelId": 12,
+      "roomNumber": "1201",
+      "roomType": "Deluxe",
+      "price": 4800,
+      "capacity": 3,
+      "status": "Available"
+    },
+    {
+      "id": 30,
+      "hotelId": 12,
+      "roomNumber": "1202",
+      "roomType": "Suite",
+      "price": 6800,
+      "capacity": 4,
+      "status": "Available"
+    },
+    {
+      "id": 31,
+      "hotelId": 13,
+      "roomNumber": "1301",
+      "roomType": "Standard",
+      "price": 4000,
+      "capacity": 2,
+      "status": "Available"
+    },
+    {
+      "id": 32,
+      "hotelId": 13,
+      "roomNumber": "1302",
+      "roomType": "Deluxe",
+      "price": 5000,
+      "capacity": 3,
+      "status": "Available"
+    },
+    {
+      "id": 33,
+      "hotelId": 14,
+      "roomNumber": "1401",
+      "roomType": "Standard",
+      "price": 3000,
+      "capacity": 2,
+      "status": "Available"
+    },
+    {
+      "id": 34,
+      "hotelId": 14,
+      "roomNumber": "1402",
+      "roomType": "Deluxe",
+      "price": 4200,
+      "capacity": 3,
+      "status": "Available"
+    },
+    {
+      "id": 35,
+      "hotelId": 15,
+      "roomNumber": "1501",
+      "roomType": "Standard",
+      "price": 1800,
+      "capacity": 2,
+      "status": "Available"
+    },
+    {
+      "id": 36,
+      "hotelId": 15,
+      "roomNumber": "1502",
+      "roomType": "Deluxe",
+      "price": 2800,
+      "capacity": 3,
+      "status": "Available"
+    },
+    {
+      "id": 37,
+      "hotelId": 16,
+      "roomNumber": "1601",
+      "roomType": "Deluxe",
+      "price": 4900,
+      "capacity": 3,
+      "status": "Available"
+    },
+    {
+      "id": 38,
+      "hotelId": 16,
+      "roomNumber": "1602",
+      "roomType": "Suite",
+      "price": 7000,
+      "capacity": 4,
+      "status": "Available"
+    },
+    {
+      "id": 39,
+      "hotelId": 17,
+      "roomNumber": "1701",
+      "roomType": "Standard",
+      "price": 2600,
+      "capacity": 2,
+      "status": "Available"
+    },
+    {
+      "id": 40,
+      "hotelId": 17,
+      "roomNumber": "1702",
+      "roomType": "Deluxe",
+      "price": 3900,
+      "capacity": 3,
+      "status": "Available"
+    },
+    {
+      "id": 41,
+      "hotelId": 18,
+      "roomNumber": "1801",
+      "roomType": "Standard",
+      "price": 3000,
+      "capacity": 2,
+      "status": "Available"
+    },
+    {
+      "id": 42,
+      "hotelId": 18,
+      "roomNumber": "1802",
+      "roomType": "Deluxe",
+      "price": 4300,
+      "capacity": 3,
+      "status": "Available"
+    },
+    {
+      "id": 43,
+      "hotelId": 19,
+      "roomNumber": "1901",
+      "roomType": "Standard",
+      "price": 2300,
+      "capacity": 2,
+      "status": "Available"
+    },
+    {
+      "id": 44,
+      "hotelId": 19,
+      "roomNumber": "1902",
+      "roomType": "Deluxe",
+      "price": 3100,
+      "capacity": 3,
+      "status": "Available"
+    },
+    {
+      "id": 45,
+      "hotelId": 20,
+      "roomNumber": "2001",
+      "roomType": "Deluxe",
+      "price": 6000,
+      "capacity": 3,
+      "status": "Available"
+    },
+    {
+      "id": 46,
+      "hotelId": 20,
+      "roomNumber": "2002",
+      "roomType": "Suite",
+      "price": 8500,
+      "capacity": 4,
+      "status": "Available"
+    }
+  ],
+
+  "users": [
+    {
+      "id": 1,
+      "name": "Brunda Addagalla",
+      "email": "brunda@example.com",
+      "phone": "9876543210"
+    },
+    {
+      "id": 2,
+      "name": "Rahul Sharma",
+      "email": "rahul@example.com",
+      "phone": "9876543211"
+    },
+    {
+      "id": 3,
+      "name": "Ananya Reddy",
+      "email": "ananya@example.com",
+      "phone": "9876543212"
+    },
+    {
+      "id": 4,
+      "name": "Arjun Kumar",
+      "email": "arjun@example.com",
+      "phone": "9876543213"
+    },
+    {
+      "id": 5,
+      "name": "Sneha Patel",
+      "email": "sneha@example.com",
+      "phone": "9876543214"
+    },
+    {
+      "id": 6,
+      "name": "Vikram Singh",
+      "email": "vikram@example.com",
+      "phone": "9876543215"
+    },
+    {
+      "id": 7,
+      "name": "Priya Nair",
+      "email": "priya@example.com",
+      "phone": "9876543216"
+    },
+    {
+      "id": 8,
+      "name": "Karthik Rao",
+      "email": "karthik@example.com",
+      "phone": "9876543217"
+    },
+    {
+      "id": 9,
+      "name": "Meera Iyer",
+      "email": "meera@example.com",
+      "phone": "9876543218"
+    },
+    {
+      "id": 10,
+      "name": "Aditya Verma",
+      "email": "aditya@example.com",
+      "phone": "9876543219"
+    },
+    {
+      "id": 11,
+      "name": "Neha Kapoor",
+      "email": "neha@example.com",
+      "phone": "9876543220"
+    },
+    {
+      "id": 12,
+      "name": "Rohan Das",
+      "email": "rohan@example.com",
+      "phone": "9876543221"
+    }
+  ],
+
+  "bookings": [
+    {
+      "id": 1,
+      "userId": 1,
+      "hotelId": 1,
+      "roomId": 2,
+      "checkIn": "2026-10-05",
+      "checkOut": "2026-10-08",
+      "guests": 2,
+      "totalAmount": 10500,
+      "status": "Confirmed",
+      "bookingDate": "2026-09-20"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "hotelId": 2,
+      "roomId": 5,
+      "checkIn": "2026-10-10",
+      "checkOut": "2026-10-12",
+      "guests": 2,
+      "totalAmount": 11000,
+      "status": "Confirmed",
+      "bookingDate": "2026-09-20"
+    },
+    {
+      "id": 3,
+      "userId": 3,
+      "hotelId": 3,
+      "roomId": 8,
+      "checkIn": "2026-09-25",
+      "checkOut": "2026-09-27",
+      "guests": 3,
+      "totalAmount": 8400,
+      "status": "Cancelled",
+      "bookingDate": "2026-09-18"
+    },
+    {
+      "id": 4,
+      "userId": 4,
+      "hotelId": 4,
+      "roomId": 10,
+      "checkIn": "2026-10-02",
+      "checkOut": "2026-10-05",
+      "guests": 2,
+      "totalAmount": 6600,
+      "status": "Confirmed",
+      "bookingDate": "2026-09-19"
+    },
+    {
+      "id": 5,
+      "userId": 5,
+      "hotelId": 5,
+      "roomId": 11,
+      "checkIn": "2026-10-15",
+      "checkOut": "2026-10-18",
+      "guests": 2,
+      "totalAmount": 14400,
+      "status": "Confirmed",
+      "bookingDate": "2026-09-19"
+    },
+    {
+      "id": 6,
+      "userId": 6,
+      "hotelId": 6,
+      "roomId": 14,
+      "checkIn": "2026-11-01",
+      "checkOut": "2026-11-04",
+      "guests": 4,
+      "totalAmount": 25500,
+      "status": "Confirmed",
+      "bookingDate": "2026-09-20"
+    },
+    {
+      "id": 7,
+      "userId": 7,
+      "hotelId": 7,
+      "roomId": 16,
+      "checkIn": "2026-10-20",
+      "checkOut": "2026-10-22",
+      "guests": 3,
+      "totalAmount": 6400,
+      "status": "Confirmed",
+      "bookingDate": "2026-09-20"
+    },
+    {
+      "id": 8,
+      "userId": 8,
+      "hotelId": 8,
+      "roomId": 19,
+      "checkIn": "2026-10-07",
+      "checkOut": "2026-10-10",
+      "guests": 2,
+      "totalAmount": 13500,
+      "status": "Pending",
+      "bookingDate": "2026-09-20"
+    },
+    {
+      "id": 9,
+      "userId": 9,
+      "hotelId": 9,
+      "roomId": 22,
+      "checkIn": "2026-12-05",
+      "checkOut": "2026-12-08",
+      "guests": 3,
+      "totalAmount": 15600,
+      "status": "Confirmed",
+      "bookingDate": "2026-09-20"
+    },
+    {
+      "id": 10,
+      "userId": 10,
+      "hotelId": 10,
+      "roomId": 26,
+      "checkIn": "2026-10-12",
+      "checkOut": "2026-10-15",
+      "guests": 4,
+      "totalAmount": 16500,
+      "status": "Confirmed",
+      "bookingDate": "2026-09-20"
+    },
+    {
+      "id": 11,
+      "userId": 11,
+      "hotelId": 11,
+      "roomId": 28,
+      "checkIn": "2026-11-10",
+      "checkOut": "2026-11-12",
+      "guests": 3,
+      "totalAmount": 9200,
+      "status": "Pending",
+      "bookingDate": "2026-09-20"
+    },
+    {
+      "id": 12,
+      "userId": 12,
+      "hotelId": 12,
+      "roomId": 30,
+      "checkIn": "2026-12-20",
+      "checkOut": "2026-12-23",
+      "guests": 4,
+      "totalAmount": 20400,
+      "status": "Confirmed",
+      "bookingDate": "2026-09-20"
+    },
+    {
+      "id": 13,
+      "userId": 1,
+      "hotelId": 13,
+      "roomId": 32,
+      "checkIn": "2026-10-25",
+      "checkOut": "2026-10-27",
+      "guests": 3,
+      "totalAmount": 10000,
+      "status": "Confirmed",
+      "bookingDate": "2026-09-20"
+    },
+    {
+      "id": 14,
+      "userId": 2,
+      "hotelId": 14,
+      "roomId": 34,
+      "checkIn": "2026-11-05",
+      "checkOut": "2026-11-08",
+      "guests": 2,
+      "totalAmount": 12600,
+      "status": "Cancelled",
+      "bookingDate": "2026-09-19"
+    },
+    {
+      "id": 15,
+      "userId": 3,
+      "hotelId": 15,
+      "roomId": 36,
+      "checkIn": "2026-10-18",
+      "checkOut": "2026-10-20",
+      "guests": 3,
+      "totalAmount": 5600,
+      "status": "Confirmed",
+      "bookingDate": "2026-09-19"
+    },
+    {
+      "id": 16,
+      "userId": 4,
+      "hotelId": 16,
+      "roomId": 38,
+      "checkIn": "2026-12-01",
+      "checkOut": "2026-12-04",
+      "guests": 4,
+      "totalAmount": 21000,
+      "status": "Confirmed",
+      "bookingDate": "2026-09-20"
+    },
+    {
+      "id": 17,
+      "userId": 5,
+      "hotelId": 17,
+      "roomId": 40,
+      "checkIn": "2026-10-30",
+      "checkOut": "2026-11-01",
+      "guests": 3,
+      "totalAmount": 7800,
+      "status": "Pending",
+      "bookingDate": "2026-09-20"
+    },
+    {
+      "id": 18,
+      "userId": 6,
+      "hotelId": 18,
+      "roomId": 42,
+      "checkIn": "2026-11-15",
+      "checkOut": "2026-11-18",
+      "guests": 2,
+      "totalAmount": 12900,
+      "status": "Confirmed",
+      "bookingDate": "2026-09-20"
+    },
+    {
+      "id": 19,
+      "userId": 7,
+      "hotelId": 19,
+      "roomId": 44,
+      "checkIn": "2026-10-08",
+      "checkOut": "2026-10-10",
+      "guests": 3,
+      "totalAmount": 6200,
+      "status": "Cancelled",
+      "bookingDate": "2026-09-18"
+    },
+    {
+      "id": 20,
+      "userId": 8,
+      "hotelId": 20,
+      "roomId": 46,
+      "checkIn": "2026-12-15",
+      "checkOut": "2026-12-18",
+      "guests": 4,
+      "totalAmount": 25500,
+      "status": "Confirmed",
+      "bookingDate": "2026-09-20"
+    }
+  ]
+}
