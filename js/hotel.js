@@ -1,4 +1,4 @@
-import { getHotels } from "./services/hotelService.js";
+import {getHotels} from "./services/hotelService.js";
 
 let hotels = [];
 
