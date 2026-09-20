@@ -5,32 +5,46 @@ import {
     getRoomById
 } from "./services/bookingService.js";
 
-const urlParams = new URLSearchParams(window.location.search);
-const HOTEL_ID = urlParams.get("hotelId");
+
+const urlParams =
+    new URLSearchParams(window.location.search);
+
+const HOTEL_ID =
+    urlParams.get("hotelId");
 
 
 async function loadBookingHistory() {
 
     try {
 
-        const container = document.getElementById("bookingList");
+        const container =
+            document.getElementById("bookingList");
 
         if (!HOTEL_ID) {
+
             container.innerHTML =
                 "<p>Hotel ID is missing.</p>";
+
             return;
         }
 
-        // Get all bookings for this hotel
-        const bookings = await getBookingsByHotel(HOTEL_ID);
 
-        // Extra safety: show ONLY bookings for this hotel
-        const hotelBookings = bookings.filter(
-            booking =>
-                String(booking.hotelId) === String(HOTEL_ID)
-        );
+        // Get bookings for selected hotel
+        const bookings =
+            await getBookingsByHotel(HOTEL_ID);
+
+
+        // Extra safety check
+        const hotelBookings =
+            bookings.filter(
+                booking =>
+                    String(booking.hotelId) ===
+                    String(HOTEL_ID)
+            );
+
 
         displayBookings(hotelBookings);
+
 
     } catch (error) {
 
@@ -38,8 +52,10 @@ async function loadBookingHistory() {
             "Error loading booking history:",
             error
         );
+
     }
 }
+
 
 
 async function displayBookings(bookings) {
@@ -49,7 +65,9 @@ async function displayBookings(bookings) {
 
     if (!container) return;
 
+
     container.innerHTML = "";
+
 
     if (bookings.length === 0) {
 
@@ -65,55 +83,110 @@ async function displayBookings(bookings) {
         try {
 
             const hotel =
-                await getHotelById(booking.hotelId);
+                await getHotelById(
+                    booking.hotelId
+                );
+
 
             const room =
-                await getRoomById(booking.roomId);
+                await getRoomById(
+                    booking.roomId
+                );
 
 
             const card =
                 document.createElement("div");
 
-            card.className = "booking-card";
+
+            card.className =
+                "booking-card";
+
+
+            const checkInDate =
+                new Date(
+                    booking.checkIn
+                ).toLocaleDateString(
+                    "en-GB",
+                    {
+                        day: "2-digit",
+                        month: "short",
+                        year: "numeric"
+                    }
+                );
+
+
+            const checkOutDate =
+                new Date(
+                    booking.checkOut
+                ).toLocaleDateString(
+                    "en-GB",
+                    {
+                        day: "2-digit",
+                        month: "short",
+                        year: "numeric"
+                    }
+                );
+
+
+            const bookingDate =
+                new Date(
+                    booking.bookingDate
+                ).toLocaleDateString(
+                    "en-GB",
+                    {
+                        day: "2-digit",
+                        month: "short",
+                        year: "numeric"
+                    }
+                );
 
 
             card.innerHTML = `
 
-                <h2>${hotel.name}</h2>
+                <h3>${hotel.name}</h3>
 
-                <p>
+                <p class="location">
                     ${hotel.location}
                 </p>
+
 
                 <p>
                     <strong>Room:</strong>
                     ${room.roomNumber} • ${room.roomType}
                 </p>
 
+
                 <p>
                     <strong>Check-in:</strong>
-                    ${booking.checkIn}
+                    ${checkInDate}
                 </p>
+
 
                 <p>
                     <strong>Check-out:</strong>
-                    ${booking.checkOut}
+                    ${checkOutDate}
                 </p>
+
 
                 <p>
                     <strong>Guests:</strong>
                     ${booking.guests}
                 </p>
 
+
                 <p>
                     <strong>Total Amount:</strong>
-                    ₹${booking.totalAmount}
+                    ₹${Number(
+                        booking.totalAmount
+                    ).toLocaleString("en-IN")}
                 </p>
+
 
                 <p>
                     <strong>Booking Date:</strong>
-                    ${booking.bookingDate}
+                    ${bookingDate}
                 </p>
+
 
                 <p>
                     <strong>Status:</strong>
@@ -124,8 +197,10 @@ async function displayBookings(bookings) {
 
                 </p>
 
+
                 ${
                     booking.status !== "Cancelled"
+
                     ? `
                         <button
                             class="cancel-btn"
@@ -133,7 +208,14 @@ async function displayBookings(bookings) {
                             Cancel Booking
                         </button>
                     `
-                    : ""
+
+                    : `
+                        <button
+                            class="cancel-btn"
+                            disabled>
+                            Cancelled
+                        </button>
+                    `
                 }
 
             `;
@@ -157,10 +239,13 @@ async function displayBookings(bookings) {
 }
 
 
+
 function addCancelEvents() {
 
     const buttons =
-        document.querySelectorAll(".cancel-btn");
+        document.querySelectorAll(
+            ".cancel-btn:not([disabled])"
+        );
 
 
     buttons.forEach(button => {
@@ -173,13 +258,13 @@ function addCancelEvents() {
                     button.dataset.id;
 
 
-                const confirmed =
+                const confirmCancel =
                     confirm(
                         "Are you sure you want to cancel this booking?"
                     );
 
 
-                if (!confirmed) return;
+                if (!confirmCancel) return;
 
 
                 try {
@@ -188,9 +273,11 @@ function addCancelEvents() {
                         bookingId
                     );
 
+
                     alert(
                         "Booking cancelled successfully!"
                     );
+
 
                     loadBookingHistory();
 
@@ -202,9 +289,11 @@ function addCancelEvents() {
                         error
                     );
 
+
                     alert(
                         "Failed to cancel booking."
                     );
+
                 }
 
             }
