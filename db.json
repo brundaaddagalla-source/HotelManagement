@@ -808,6 +808,30 @@
       "name": "Rohan Das",
       "email": "rohan@example.com",
       "phone": "9876543221"
+    },
+    {
+      "id": "2bZgP0PzW5s",
+      "name": "Brunda A",
+      "email": "brunda1705@gmail.com",
+      "password": "12345678"
+    },
+    {
+      "id": "MxaeWqYfxH0",
+      "name": "shakeera",
+      "email": "shakeera@mail.com",
+      "password": "123456"
+    },
+    {
+      "id": "NWodmTBWVc8",
+      "name": "Meghana",
+      "email": "meghana@gmail.com",
+      "password": "12345678"
+    },
+    {
+      "id": "DxZ6Q3lC3oc",
+      "name": "khaya",
+      "email": "meghana@gmail.com",
+      "password": "12345678"
     }
   ],
   "bookings": [
@@ -832,7 +856,7 @@
       "checkOut": "2026-10-12",
       "guests": 2,
       "totalAmount": 11000,
-      "status": "Confirmed",
+      "status": "Cancelled",
       "bookingDate": "2026-09-20"
     },
     {
@@ -1158,6 +1182,30 @@
       "status": "Confirmed",
       "bookingDate": "2026-09-20",
       "id": "g4g2J_I5xro"
+    },
+    {
+      "userId": 10,
+      "hotelId": 5,
+      "roomId": 12,
+      "checkIn": "2026-09-27",
+      "checkOut": "2026-10-01",
+      "guests": 4,
+      "totalAmount": 26000,
+      "status": "Cancelled",
+      "bookingDate": "2026-09-21",
+      "id": "sxq2EpndrfM"
+    },
+    {
+      "userId": 12,
+      "hotelId": 7,
+      "roomId": 16,
+      "checkIn": "2026-09-27",
+      "checkOut": "2026-09-29",
+      "guests": 3,
+      "totalAmount": 6400,
+      "status": "Confirmed",
+      "bookingDate": "2026-09-21",
+      "id": "cavVTHwAHHQ"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
