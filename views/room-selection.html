@@ -13,80 +13,50 @@
 </head>
 
 <body>
-
     <button class="back-btn"
         onclick="window.location.href='hotel-details.html?id=' + new URLSearchParams(window.location.search).get('hotelId')">
         ← Back to Hotel
     </button>
-
     <header>
         <h1>Select Your Room</h1>
     </header>
-
     <main class="container">
-
         <div id="hotelInfo">
             <h2>Available Rooms</h2>
         </div>
-
-
-        <!-- Room Filters -->
         <div class="room-filters">
-
             <h3>Filter Rooms</h3>
-
-            <!-- Status Filter -->
             <label for="statusFilter">
                 Room Status:
             </label>
-
             <select id="statusFilter">
                 <option value="All">All Rooms</option>
                 <option value="Available">Available</option>
             </select>
-
-            <!-- Check-in -->
             <label for="checkIn">
                 Check-in:
             </label>
-
             <input type="date" id="checkIn">
-
-            <!-- Check-out -->
             <label for="checkOut">
                 Check-out:
             </label>
-
             <input type="date" id="checkOut">
-
-            <!-- Guests -->
             <label for="guests">
                 Guests:
             </label>
-
             <input type="number" id="guests" min="1" placeholder="Number of guests">
-
             <div class="filter-buttons">
-
                 <button type="button" id="applyFilterBtn">
                     Apply Filter
                 </button>
-
                 <button type="button" id="clearFilterBtn">
                     Clear Filter
                 </button>
-
             </div>
-
         </div>
-
-        <!-- Rooms -->
         <div id="roomContainer" class="room-container">
-            <!-- Rooms will appear here -->
         </div>
-
         <p id="roomMessage"></p>
-
     </main>
 
     <script type="module" src="../js/room.js"></script>
