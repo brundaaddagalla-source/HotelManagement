@@ -1,16 +1,13 @@
 import { getHotels } from "./services/hotelService.js";
 import { getRoomsByHotel } from "./services/roomService.js";
-
 const hotelDetails = document.getElementById("hotelDetails");
 const backBtn = document.getElementById("backBtn");
 const urlParams = new URLSearchParams(window.location.search);
 const hotelId = urlParams.get("id");
-
 backBtn.addEventListener("click", function () {
     window.location.href = "index.html";
 }
 );
-
 async function loadHotel() {
     try {
         if (!hotelId) {
@@ -19,12 +16,10 @@ async function loadHotel() {
         }
         const hotels = await getHotels();
         const hotel = hotels.find(hotel => String(hotel.id) === String(hotelId));
-
         if (!hotel) {
             showError("Hotel not found.");
             return;
         }
-
         let rooms = [];
         try {
             rooms = await getRoomsByHotel(hotelId);
@@ -37,8 +32,6 @@ async function loadHotel() {
         showError("Unable to load hotel details.");
     }
 }
-
-
 function displayHotel(hotel, rooms) {
     const availableRooms = rooms.filter(room => room.status === "Available");
     hotelDetails.innerHTML = `
@@ -59,9 +52,7 @@ function displayHotel(hotel, rooms) {
                     <p class="hotel-price">₹${hotel.price}per night</p>
                     <p>🏨 Comfortable stay with modern facilities and convenient location.</p>
                 </div>
-
             </div>
-
             <div class="hotel-description">
                 <h3> About ${hotel.name} </h3>
                 <p> ${hotel.description || `Welcome to ${hotel.name},
@@ -73,33 +64,25 @@ function displayHotel(hotel, rooms) {
                     to nearby attractions.`}
                 </p>
             </div>
-
             <div class="hotel-information">
                 <h3> Hotel Information </h3>
                 <div class="hotel-info-grid">
-
                     <div class="info-box">
                         <strong>Location </strong>
                         <span> ${hotel.location}</span>
                     </div>
-
                     <div class="info-box">
                         <strong>Rating</strong>
                         <span>⭐ ${hotel.rating}</span>
                     </div>
-
-
                     <div class="info-box">
                         <strong>Starting Price </strong>
                         <span>₹${hotel.price}/ night </span>
                     </div>
-
                 </div>
             </div>
-
             <div class="amenities">
                 <h3>Amenities</h3>
-
                 <div class="amenities-list">
                 ${
                 hotel.amenities.map(amenity => {
@@ -134,45 +117,33 @@ function displayHotel(hotel, rooms) {
                 }
                 </div>
             </div>
-
             <div class="rooms-summary">
-
                 <div>
                     <h3>Rooms</h3>
                     <p>${availableRooms.length} room(s) currently available</p>
                 </div>
-
                 <strong> ${rooms.length} Total Rooms </strong>
-
             </div>
-
             <div class="hotel-actions">
-
                 <button
                 class="view-history-btn"
                 id="viewHistoryBtn"
                 >
                 View History
                 </button>
-                
                 <button
                     class="view-rooms-btn"
                     id="viewRoomsBtn"
                 >
                     View Rooms
                 </button>
-
             </div>
         </section>
     `;
-
     document
         .getElementById("viewRoomsBtn")
         .addEventListener("click", function () {
-            window.location.href =
-                `room-selection.html?hotelId=${hotelId}`;
-        }
-        );
+            window.location.href =`room-selection.html?hotelId=${hotelId}`;});
     document
         .getElementById("viewHistoryBtn")
         .addEventListener("click", function () {
@@ -181,7 +152,6 @@ function displayHotel(hotel, rooms) {
         });
 
 }
-
 function showError(message) {
     hotelDetails.innerHTML = `
         <div class="error-message">
@@ -195,5 +165,4 @@ function showError(message) {
         </div>
     `;
 }
-
 loadHotel();
