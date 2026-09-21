@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create User</title>
+
+    <style>
+        body {
+            background-color: #eef6ff;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3a5f;
+            margin: 40px 0 25px;
+            font-size: 32px;
+        }
+
+        .user-form {
+            background-color: white;
+            padding: 30px;
+            margin: 30px auto;
+            max-width: 450px;
+            border: 1px solid #bfdbfe;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .user-form label {
+            display: block;
+            margin-bottom: 7px;
+            color: #1e3a5f;
+            font-weight: bold;
+        }
+
+        .user-form input {
+            width: 100%;
+            padding: 12px;
+            box-sizing: border-box;
+            margin-bottom: 18px;
+            border: 1px solid #cbd5e1;
+            border-radius: 7px;
+            background-color: #f8fbff;
+            font-size: 15px;
+        }
+
+        .user-form input:focus {
+            outline: none;
+            border-color: #60a5fa;
+            background-color: white;
+        }
+
+        .user-form input:invalid:not(:placeholder-shown) {
+            border-color: #ef4444;
+        }
+
+        .user-form input:valid:not(:placeholder-shown) {
+            border-color: #22c55e;
+        }
+
+        .user-form button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 7px;
+            background-color: #1e3a5f;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .user-form button:hover {
+            background-color: #2c5282;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Create User</h1>
+
+    <div class="user-form">
+
+        <form id="userForm">
+
+            <label for="name">Name</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                minlength="3"
+                pattern="[A-Za-z ]+"
+                title="Name should contain only letters and spaces"
+                required
+            >
+
+            <label for="email">Mail ID</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your mail ID"
+                required
+            >
+
+            <label for="password">Password</label>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                minlength="8"
+                title="Password must contain at least 8 characters"
+                required
+            >
+
+            <label for="ph">Phone Number</label>
+            <input
+                type="tel"
+                id="ph"
+                name="phone"
+                placeholder="Enter your phone number"
+                pattern="[0-9]{10}"
+                maxlength="10"
+                minlength="10"
+                title="Phone number must contain exactly 10 digits"
+                required
+            >
+
+            <button type="submit">Create User</button>
+
+        </form>
+
+        <br><br>
+
+        <button onclick="window.location.href='index.html'">
+            Back to main
+        </button>
+
+    </div>
+
+    <script type="module" src="../js/user.js"></script>
+
+</body>
+
+</html>

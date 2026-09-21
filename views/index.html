@@ -8,22 +8,31 @@
 </head>
 <body>
     <h1>Hotel Booking System</h1>
-    <div class="search-section">
-        <input type="text" id="searchInput" placeholder="Search hotels...">
-        <select id="locationFilter">
-            <option value="">All Locations</option>
-        </select>
-        <select id="priceFilter">
-            <option value="">All Prices</option>
-            <option value="3000">Below ₹3000</option>
-            <option value="4000">Below ₹4000</option>
-            <option value="5000">Below ₹5000</option>
-            <option value="6000">Below ₹6000</option>
-            <option value="7500">Below ₹7500</option>
-            <option value="10000">Below ₹10000</option>
-            <option value="custom">Custom Range</option>
-        </select>
-    </div>
+
+<div class="create-user-section">
+    <button class="create-user-btn" onclick="window.location.href='create_user.html'">
+        Create User
+    </button>
+</div>
+
+<div class="search-section">
+    <input type="text" id="searchInput" placeholder="Search hotels...">
+
+    <select id="locationFilter">
+        <option value="">All Locations</option>
+    </select>
+
+    <select id="priceFilter">
+        <option value="">All Prices</option>
+        <option value="3000">Below ₹3000</option>
+        <option value="4000">Below ₹4000</option>
+        <option value="5000">Below ₹5000</option>
+        <option value="6000">Below ₹6000</option>
+        <option value="7500">Below ₹7500</option>
+        <option value="10000">Below ₹10000</option>
+        <option value="custom">Custom Range</option>
+    </select>
+</div>
     <div id="hotelContainer"></div>
     <script type="module" src="../js/hotel.js"></script>
 </body>
