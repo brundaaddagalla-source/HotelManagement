@@ -1,2 +1,2 @@
-const API_URL = "https://my-json-server.typicode.com/brundaaddagalla-source/HotelManagement";
+const API_URL = "https://brundaaddagalla-source.github.io/HotelManagement/db.json";
 export default API_URL;
