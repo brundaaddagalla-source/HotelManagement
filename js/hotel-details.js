@@ -5,7 +5,7 @@ const backBtn = document.getElementById("backBtn");
 const urlParams = new URLSearchParams(window.location.search);
 const hotelId = urlParams.get("id");
 backBtn.addEventListener("click", function () {
-    window.location.href = "index.html";
+    window.location.href = "../index.html";
 }
 );
 async function loadHotel() {
@@ -158,7 +158,7 @@ function showError(message) {
             <h2>${message}</h2>
             <button
                 class="view-rooms-btn"
-                onclick="window.location.href='./index.html'"
+                onclick="window.location.href='../index.html'"
             >
                 Back to Hotels
             </button>

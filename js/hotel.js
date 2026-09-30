@@ -18,7 +18,7 @@ function displayHotels(hotels) {
         container.innerHTML += `
             <div class="hotel-card">
                 <img
-                    src="../${hotel.image}"
+                    src=".${hotel.image}"
                     alt="${hotel.name}"
                     class="hotel-image"
                     onerror="this.style.display='none'"
