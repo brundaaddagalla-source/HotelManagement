@@ -1,12 +1,10 @@
 import axios from "https://cdn.jsdelivr.net/npm/axios@1.7.9/+esm";
 
-// Fixed to use the full My JSON Server path for your repo
-const API_URL = "https://brundaaddagalla-source.github.io/HotelManagement/db.json";
+const API_URL = "https://brundaaddagalla-source.github.io/HotelManagement";
 
 export const getHotels = async () => {
-    // This now appends /hotels to your live base URL
-    const response = await axios.get(`${API_URL}/hotels`);
-    return response.data;
+    const response = await axios.get(`${API_URL}/db.json`);
+    return response.data.hotels;
 };
 
 export default API_URL;
