@@ -22,6 +22,8 @@ async function loadBookingHistory() {
         displayBookings(hotelBookings);
     } catch (error) {
         console.error("Error loading booking history:",error);
+        const c = document.getElementById("bookingList");
+        if (c) c.innerHTML = "<p>Unable to load booking history. Please try again.</p>";
     }
 }
 

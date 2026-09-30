@@ -1,40 +1,29 @@
-import axios from "https://cdn.jsdelivr.net/npm/axios@1.6.7/+esm";
+import { getUsers, createUser } from "./services/userService.js";
 
 const userForm = document.getElementById("userForm");
 
 userForm.addEventListener("submit", async (event) => {
-
     event.preventDefault();
 
-    const response = await axios.get(
-        "http://localhost:3000/users"
-    );
+    try {
+        const users = await getUsers();
+        const email = document.getElementById("email").value;
 
-    const users = response.data;
+        if (users.find(u => u.email === email)) {
+            alert("email already exists");
+            return;
+        }
 
-    const user = {
-        id: users.length + 1,
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        password: document.getElementById("password").value
-    };
+        const user = await createUser({
+            name: document.getElementById("name").value,
+            email,
+            phone: document.getElementById("ph").value
+        });
 
-    const e= users.find(i => i.email===user.email)
-    if (e){
-        alert ("email already exists");
-    }else{
-    await axios.post(
-            "http://localhost:3000/users",
-            user
-        );
-
-        alert(
-            "User created successfully!\n\n" +
-            "User ID: " + user.id
-        );
+        alert("User created successfully!\n\nUser ID: " + user.id);
+        userForm.reset();
+    } catch (error) {
+        console.error(error);
+        alert("Could not create user.");
     }
-
-    
-
-    userForm.reset();
 });
