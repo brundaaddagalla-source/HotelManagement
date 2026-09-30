@@ -1,7 +1,7 @@
 import axios from "https://cdn.jsdelivr.net/npm/axios@1.7.9/+esm";
 
 // Fixed to use the full My JSON Server path for your repo
-const API_URL = "https://typicode.com";
+const API_URL = "https://my-json-server.typicode.com/brundaaddagalla-source/HotelManagement";
 
 export const getHotels = async () => {
     // This now appends /hotels to your live base URL
