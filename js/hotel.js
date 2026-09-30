@@ -29,7 +29,7 @@ function displayHotels(hotels) {
                 <p>₹${hotel.price} per night</p>
                 <button
                     class="view-hotel-btn"
-                    onclick="window.location.href='hotel-details.html?id=${hotel.id}'"
+                    onclick="window.location.href='views/hotel-details.html?id=${hotel.id}'"
                 >
                     View Hotel
                 </button>
